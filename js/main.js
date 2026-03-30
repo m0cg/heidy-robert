@@ -64,9 +64,6 @@
     var sections = document.querySelectorAll('.parallax-bg');
     if (!sections.length) return;
 
-    // Skip on mobile / touch where fixed bg is already disabled
-    if (window.innerWidth <= 768) return;
-
     var ticking = false;
     function onScroll() {
       if (!ticking) {

@@ -512,12 +512,6 @@ footer {
   background-position: center center;
 }
 
-@media (max-width: 768px) {
-  .parallax-bg {
-    background-attachment: scroll;
-  }
-}
-
 /* ── Gallery Showcase ─────────────────────────────────── */
 .gallery-showcase {
   position: relative;
