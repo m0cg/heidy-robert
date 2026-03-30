@@ -1,0 +1,164 @@
+/**
+ * i18n – Lightweight translation system
+ * Supports English (en) and Svenska (sv)
+ * Uses data-i18n attributes for text and data-i18n-placeholder for placeholders
+ */
+(function () {
+  'use strict';
+
+  var translations = {
+    en: {
+      gift_message:
+        "Our greatest gift is your presence.",
+      countdown_label: 'Forever starts in:',
+      confirm_btn: 'Confirm attendance',
+      event_title: 'Event',
+      ceremony_title: 'Ceremony',
+      ceremony_date: 'June 27, 2026',
+      ceremony_venue_prefix: 'Parish',
+      reception_title: 'Reception',
+      reception_date: 'June 27, 2026',
+      reception_venue_prefix: 'At',
+      gallery_title: 'Gallery',
+      thank_you_title: 'Thank you!',
+      thank_you_message:
+        'We are excited to see you on the day of the event.',
+      rsvp_title: 'Confirm Attendance',
+      rsvp_subtitle: '<br>Please confirm the total number of guests.',
+      form_name: 'Name',
+      form_adults: 'Adults',
+      form_children: 'Children (0–12 yrs)',
+      form_submit: 'Send',
+      rsvp_processing:
+        '<strong>One moment</strong> — We are processing your request.',
+      rsvp_error:
+        '<strong>Oops!</strong> There was a problem with the server.',
+      footer_message:
+        'Made with ❤️ for Heidy & Robert',
+      days: 'Days',
+      hours: 'Hours',
+      minutes: 'Minutes',
+      seconds: 'Seconds',
+    },
+    sv: {
+      gift_message:
+        'Vår största gåva är din närvaro.',
+      countdown_label: 'Evigheten börjar om:',
+      confirm_btn: 'Bekräfta närvaro',
+      event_title: 'Evenemang',
+      ceremony_title: 'Ceremoni',
+      ceremony_date: '27 juni 2026',
+      ceremony_venue_prefix: 'Församling',
+      reception_title: 'Mottagning',
+      reception_date: '27 juni 2026',
+      reception_venue_prefix: 'På',
+      gallery_title: 'Galleri',
+      thank_you_title: 'Tack!',
+      thank_you_message:
+        'Vi ser fram emot att träffa er på evenemangsdagen.',
+      rsvp_title: 'Bekräfta närvaro',
+      rsvp_subtitle:
+        '<br>Vänligen bekräfta det totala antalet gäster.',
+      form_name: 'Namn',
+      form_adults: 'Vuxna',
+      form_children: 'Barn (0–12 år)',
+      form_submit: 'Skicka',
+      rsvp_processing:
+        '<strong>Ett ögonblick</strong> — Vi bearbetar din förfrågan.',
+      rsvp_error:
+        '<strong>Hoppsan!</strong> Det uppstod ett problem med servern.',
+      footer_message:
+        'Gjord med ❤️ för Heidy & Robert',
+      days: 'Dagar',
+      hours: 'Timmar',
+      minutes: 'Minuter',
+      seconds: 'Sekunder',
+    },
+  };
+
+  var currentLang = localStorage.getItem('lang') || 'en';
+
+  /**
+   * Get a translated string by key.
+   * Falls back to English, then to the raw key.
+   */
+  function t(key) {
+    if (translations[currentLang] && translations[currentLang][key]) {
+      return translations[currentLang][key];
+    }
+    if (translations.en && translations.en[key]) {
+      return translations.en[key];
+    }
+    return key;
+  }
+
+  /** Apply all translations to the DOM */
+  function applyTranslations() {
+    var els = document.querySelectorAll('[data-i18n]');
+    for (var i = 0; i < els.length; i++) {
+      var key = els[i].getAttribute('data-i18n');
+      els[i].innerHTML = t(key);
+    }
+
+    var placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+    for (var j = 0; j < placeholders.length; j++) {
+      var pKey = placeholders[j].getAttribute('data-i18n-placeholder');
+      placeholders[j].setAttribute('placeholder', t(pKey));
+    }
+  }
+
+  /** Switch the active language */
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+
+    applyTranslations();
+
+    // Update selector label
+    var label = document.getElementById('currentLangLabel');
+    if (label) label.textContent = lang.toUpperCase();
+
+    // Highlight active item in dropdown
+    var items = document.querySelectorAll('[data-lang]');
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].getAttribute('data-lang') === lang) {
+        items[i].classList.add('active');
+      } else {
+        items[i].classList.remove('active');
+      }
+    }
+
+    // Notify other scripts (e.g. countdown needs to re-render labels)
+    document.dispatchEvent(
+      new CustomEvent('languageChanged', { detail: { lang: lang } })
+    );
+  }
+
+  function getCurrentLang() {
+    return currentLang;
+  }
+
+  // ── Initialise on DOM ready ──
+  document.addEventListener('DOMContentLoaded', function () {
+    // Bind language switcher clicks
+    var langButtons = document.querySelectorAll('[data-lang]');
+    for (var i = 0; i < langButtons.length; i++) {
+      langButtons[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        setLanguage(this.getAttribute('data-lang'));
+      });
+    }
+
+    // Apply saved or default language
+    setLanguage(currentLang);
+  });
+
+  // Expose public API
+  window.i18n = {
+    t: t,
+    setLanguage: setLanguage,
+    getCurrentLang: getCurrentLang,
+  };
+})();
