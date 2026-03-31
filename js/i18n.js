@@ -1,6 +1,6 @@
 /**
  * i18n – Lightweight translation system
- * Supports English (en) and Svenska (sv)
+ * Supports English (en), Svenska (sv), and Español (es)
  * Uses data-i18n attributes for text and data-i18n-placeholder for placeholders
  */
 (function () {
@@ -42,7 +42,7 @@
     },
     sv: {
       gift_message:
-        'Vår största gåva är din närvaro.',
+        'Vår största gåva är er närvaro.',
       countdown_label: 'Evigheten börjar om:',
       confirm_btn: 'Bekräfta närvaro',
       event_title: 'Evenemang',
@@ -73,6 +73,40 @@
       hours: 'Timmar',
       minutes: 'Minuter',
       seconds: 'Sekunder',
+    },
+    es: {
+      gift_message:
+        'Nuestro mayor regalo es su presencia.',
+      countdown_label: 'Para siempre comienza en:',
+      confirm_btn: 'Confirmar asistencia',
+      event_title: 'Evento',
+      ceremony_title: 'Ceremonia',
+      ceremony_date: '27 de junio de 2026',
+      ceremony_venue_prefix: 'Parroquia',
+      reception_title: 'Recepción',
+      reception_date: '27 de junio de 2026',
+      reception_venue_prefix: 'En',
+      gallery_title: 'Galería',
+      thank_you_title: '¡Gracias!',
+      thank_you_message:
+        'Estamos emocionados de verlos el día del evento.',
+      rsvp_title: 'Confirmar asistencia',
+      rsvp_subtitle:
+        '<br>Por favor confirma el número total de invitados.',
+      form_name: 'Nombre',
+      form_adults: 'Adultos',
+      form_children: 'Niños (0–12 años)',
+      form_submit: 'Enviar',
+      rsvp_processing:
+        '<strong>Un momento</strong> — Estamos procesando tu solicitud.',
+      rsvp_error:
+        '<strong>¡Ups!</strong> Hubo un problema con el servidor.',
+      footer_message:
+        'Hecho con ❤️ para Heidy &amp; Robert',
+      days: 'Días',
+      hours: 'Horas',
+      minutes: 'Minutos',
+      seconds: 'Segundos',
     },
   };
 
