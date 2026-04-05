@@ -64,8 +64,8 @@
     var sections = document.querySelectorAll('.parallax-bg');
     if (!sections.length) return;
 
-    // Skip on mobile / touch where fixed bg is already disabled
-    if (window.innerWidth <= 768) return;
+    var isMobile = window.innerWidth <= 768;
+    var factor = isMobile ? 0.15 : 0.35;
 
     var ticking = false;
     function onScroll() {
@@ -76,7 +76,7 @@
             var section = sections[i];
             var rect = section.getBoundingClientRect();
             var sectionTop = rect.top + scrollY;
-            var offset = (scrollY - sectionTop) * 0.35;
+            var offset = (scrollY - sectionTop) * factor;
             section.style.backgroundPositionY = 'calc(50% + ' + offset + 'px)';
           }
           ticking = false;
@@ -86,6 +86,14 @@
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Recalculate on orientation change / resize
+    window.addEventListener('resize', function () {
+      isMobile = window.innerWidth <= 768;
+      factor = isMobile ? 0.15 : 0.35;
+      onScroll();
+    });
+
     onScroll();
   }
 

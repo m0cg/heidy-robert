@@ -212,7 +212,8 @@
 			<div class="row justify-content-center animate-box">
 				<div class="col-lg-8 text-center section-heading">
 					<h2 data-i18n="rsvp_title">Confirm Attendance</h2>
-					<p data-i18n="rsvp_subtitle"><br>Please confirm the total number of guests.</p>
+					<p data-i18n="rsvp_subtitle"><br>Please let us know if you can attend by May 27.</p>
+					<p class="rsvp-children-note" data-i18n="rsvp_children_note">Children are a gift from God, but tonight they get to stay home and sleep.</p>
 				</div>
 			</div>
 			<div class="row justify-content-center animate-box">
@@ -224,15 +225,11 @@
 								<label for="name" class="visually-hidden" data-i18n="form_name">Name</label>
 								<input type="text" class="form-control" id="name" name="name" data-i18n-placeholder="form_name" placeholder="Name" required>
 							</div>
-							<div class="col-md-2">
-								<label for="number" class="visually-hidden" data-i18n="form_adults">Adults</label>
-								<input type="number" min="1" class="form-control" id="number" name="number" data-i18n-placeholder="form_adults" placeholder="Adults" required>
+							<div class="col-md-4">
+								<label for="number" class="visually-hidden" data-i18n="form_adults">No. of persons</label>
+								<input type="number" min="1" step="1" class="form-control" id="number" name="number" data-i18n-placeholder="form_adults" placeholder="No. of persons" required>
 							</div>
-							<div class="col-md-3">
-								<label for="children" class="visually-hidden" data-i18n="form_children">Children (0-12 yrs)</label>
-								<input type="number" min="0" class="form-control" id="children" name="children" data-i18n-placeholder="form_children" placeholder="Children (0-12 yrs)">
-							</div>
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<button type="submit" class="btn btn-primary w-100" data-i18n="form_submit">Send</button>
 							</div>
 						</div>

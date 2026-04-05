@@ -24,10 +24,10 @@
       thank_you_message:
         'We are excited to see you on the day of the event.',
       rsvp_title: 'Confirm Attendance',
-      rsvp_subtitle: '<br>Please confirm the total number of guests.',
+      rsvp_subtitle: '<br>Please let us know if you can attend by May 27.',
+      rsvp_children_note: 'Children are a gift from God, but tonight they get to stay home and sleep.',
       form_name: 'Name',
-      form_adults: 'Adults',
-      form_children: 'Children (0–12 yrs)',
+      form_adults: 'No. of persons',
       form_submit: 'Send',
       rsvp_processing:
         '<strong>One moment</strong> — We are processing your request.',
@@ -58,10 +58,10 @@
         'Vi ser fram emot att träffa er på evenemangsdagen.',
       rsvp_title: 'Bekräfta närvaro',
       rsvp_subtitle:
-        '<br>Vänligen bekräfta det totala antalet gäster.',
+        '<br>Vänligen meddela om ni kan närvara senast 27 Maj.',
+      rsvp_children_note: 'Barn är en gudagåva men denna kväll får de stanna hemma och sova.',
       form_name: 'Namn',
-      form_adults: 'Vuxna',
-      form_children: 'Barn (0–12 år)',
+      form_adults: 'Antal personer',
       form_submit: 'Skicka',
       rsvp_processing:
         '<strong>Ett ögonblick</strong> — Vi bearbetar din förfrågan.',
@@ -92,10 +92,10 @@
         'Estamos emocionados de verlos el día del evento.',
       rsvp_title: 'Confirmar asistencia',
       rsvp_subtitle:
-        '<br>Por favor confirma el número total de invitados.',
+        '<br>Por favor confirma tu asistencia antes del 27 de mayo.',
+      rsvp_children_note: 'Los niños son un regalo de Dios, pero esta noche se quedan en casa a dormir.',
       form_name: 'Nombre',
-      form_adults: 'Adultos',
-      form_children: 'Niños (0–12 años)',
+      form_adults: 'Nº de personas',
       form_submit: 'Enviar',
       rsvp_processing:
         '<strong>Un momento</strong> — Estamos procesando tu solicitud.',

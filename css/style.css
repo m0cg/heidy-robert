@@ -239,6 +239,10 @@ h1, h2, h3, h4, h5, h6 {
   .section-bg {
     padding: 4em 0;
     background-attachment: scroll; /* fixed attachment is janky on mobile */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 
@@ -431,6 +435,12 @@ h1, h2, h3, h4, h5, h6 {
 #rsvp-section .section-heading p {
   color: rgba(255, 255, 255, 0.6);
 }
+.rsvp-children-note {
+  font-style: italic;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 6px;
+}
 
 #rsvp-section .form-control {
   background: rgba(255, 255, 255, 0.15);
@@ -515,6 +525,10 @@ footer {
 @media (max-width: 768px) {
   .parallax-bg {
     background-attachment: scroll;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 

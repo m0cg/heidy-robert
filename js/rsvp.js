@@ -29,6 +29,16 @@
       e.preventDefault();
 
       var alertWrapper = document.getElementById('alert-wrapper');
+      var numberInput = document.getElementById('number');
+      var personCount = numberInput.value.trim();
+
+      // Validate: must be a positive integer >= 1
+      if (!personCount || isNaN(personCount) || parseInt(personCount, 10) < 1) {
+        alertWrapper.innerHTML = alertMarkup('warning', 'Please enter a valid number of persons (minimum 1).');
+        numberInput.focus();
+        return;
+      }
+
       alertWrapper.innerHTML = alertMarkup('info', t('rsvp_processing'));
 
       var formData = new FormData(form);
