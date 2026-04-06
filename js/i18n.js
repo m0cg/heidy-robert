@@ -19,6 +19,10 @@
       reception_title: 'Reception',
       reception_date: 'June 27, 2026',
       reception_venue_prefix: 'At',
+      start_of_day_title: 'Start of the day',
+      start_of_day_message: 'Accompany us before the main event on the following address at 12:30:',
+      start_of_day_groom_label: 'Guests of the groom:',
+      start_of_day_bride_label: 'Guests of the bride:',
       gallery_title: 'Gallery',
       thank_you_title: 'Thank you!',
       thank_you_message:
@@ -52,6 +56,10 @@
       reception_title: 'Mottagning',
       reception_date: '27 juni 2026',
       reception_venue_prefix: 'På',
+      start_of_day_title: 'Dagens start',
+      start_of_day_message: 'Följ med oss innan huvudevenemanget på följande adress kl. 12:30:',
+      start_of_day_groom_label: 'Brudgummens gäster:',
+      start_of_day_bride_label: 'Brudens gäster:',
       gallery_title: 'Galleri',
       thank_you_title: 'Tack!',
       thank_you_message:
@@ -86,6 +94,10 @@
       reception_title: 'Recepción',
       reception_date: '27 de junio de 2026',
       reception_venue_prefix: 'En',
+      start_of_day_title: 'Inicio del día',
+      start_of_day_message: 'Acompáñanos antes del evento principal en la siguiente dirección a las 12:30:',
+      start_of_day_groom_label: 'Invitados del novio:',
+      start_of_day_bride_label: 'Invitados de la novia:',
       gallery_title: 'Galería',
       thank_you_title: '¡Gracias!',
       thank_you_message:
