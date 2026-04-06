@@ -246,6 +246,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Touch devices: disable fixed attachment for all orientations */
+@media (hover: none) and (pointer: coarse) {
+  .section-bg {
+    background-attachment: scroll;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
 .overlay {
   position: absolute;
   inset: 0;
@@ -548,6 +559,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .parallax-bg {
+    background-attachment: scroll;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Touch devices: disable fixed attachment for all orientations */
+@media (hover: none) and (pointer: coarse) {
   .parallax-bg {
     background-attachment: scroll;
     -webkit-backface-visibility: hidden;

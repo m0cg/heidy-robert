@@ -28,7 +28,7 @@
       thank_you_message:
         'We are excited to see you on the day of the event.',
       rsvp_title: 'Confirm Attendance',
-      rsvp_subtitle: '<br>Please let us know if you can attend by May 27.',
+      rsvp_subtitle: '<br>Please let us know if you can attend by May 27.<br>Fill the form below or message us at 0705950514',
       rsvp_children_note: 'Children are a gift from God, but tonight they get to stay home and sleep.',
       form_name: 'Name',
       form_adults: 'No. of persons',
@@ -66,7 +66,7 @@
         'Vi ser fram emot att träffa er på evenemangsdagen.',
       rsvp_title: 'Bekräfta närvaro',
       rsvp_subtitle:
-        '<br>Vänligen meddela om ni kan närvara senast 27 Maj.',
+        '<br>Vänligen meddela om ni kan närvara senast 27 Maj.<br>Fyll i formuläret nedan eller kontakta oss på 0705950514',
       rsvp_children_note: 'Barn är en gudagåva men denna kväll får de stanna hemma och sova.',
       form_name: 'Namn',
       form_adults: 'Antal personer',
@@ -104,7 +104,7 @@
         'Estamos emocionados de verlos el día del evento.',
       rsvp_title: 'Confirmar asistencia',
       rsvp_subtitle:
-        '<br>Por favor confirma tu asistencia antes del 27 de mayo.',
+        '<br>Por favor confirma tu asistencia antes del 27 de mayo.<br>Rellena el formulario a continuación o escríbenos al 0705950514',
       rsvp_children_note: 'Los niños son un regalo de Dios, pero esta noche se quedan en casa a dormir.',
       form_name: 'Nombre',
       form_adults: 'Nº de personas',
